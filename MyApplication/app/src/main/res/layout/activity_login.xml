@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/edittextLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Login"
+        android:inputType="textShortMessage"
+        />
+
+    <TextView
+        android:id="@+id/textviewError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textColor="@android:color/holo_red_light"/>
+<!--
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textinputlayoutLogin">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textinputedittextLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Placeholder"/>
+
+    </android.support.design.widget.TextInputLayout>
+-->
+    <Button
+        android:id="@+id/btnConnexion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+</LinearLayout>

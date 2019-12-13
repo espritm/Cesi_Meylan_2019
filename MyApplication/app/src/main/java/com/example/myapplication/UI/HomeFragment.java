@@ -34,6 +34,8 @@ import com.example.myapplication.R;
 
 import org.json.JSONException;
 
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -223,7 +225,8 @@ public class HomeFragment extends Fragment {
                         }
 
                         //Peupler la Listview
-                        Adapter.addAll(Meteo.getJoursSemaines());
+                        if (Meteo != null)
+                            Adapter.addAll(Meteo.getJoursSemaines());
 
                         //Cacher le refresher
                         Refresher.setRefreshing(false);
@@ -235,7 +238,16 @@ public class HomeFragment extends Fragment {
                         ;
                     }
                 }
-        );
+        ){
+            //Pour ajouter des paramètres dans le header de la requête HTTP
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  params = new HashMap<String, String>();
+                params.put("Parameter Name", "Parameter Value");
+
+                return params;
+            }
+        };
 
         queue.add(request);
     }

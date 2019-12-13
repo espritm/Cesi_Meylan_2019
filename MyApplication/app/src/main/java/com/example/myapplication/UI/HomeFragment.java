@@ -153,7 +153,16 @@ public class HomeFragment extends Fragment {
                         ;
                     }
                 }
-        );
+        ){
+            //Pour ajouter des paramètres dans le header de la requête HTTP
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  params = new HashMap<String, String>();
+                params.put("Parameter Name", "Parameter Value");
+
+                return params;
+            }
+        };
 
         queue.add(request);
     }
